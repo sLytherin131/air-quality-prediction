@@ -2,15 +2,19 @@ import streamlit as st
 import joblib
 import pandas as pd
 import numpy as np
+import os
 
-# Load saved XGBoost model from GitHub repo
-loaded_xgb_model = joblib.load('https://github.com/sLytherin131/air-quality-prediction/xgboost_model.pkl')
+# Load saved XGBoost model from local directory
+model_path = os.path.join(os.getcwd(), 'xgboost_model.pkl')
+loaded_xgb_model = joblib.load(model_path)
 
-# Load saved scaler from GitHub repo
-scaler = joblib.load('https://github.com/sLytherin131/air-quality-prediction/scaler.pkl')
+# Load saved scaler from local directory
+scaler_path = os.path.join(os.getcwd(), 'scaler.pkl')
+scaler = joblib.load(scaler_path)
 
-# Load saved LabelEncoder from GitHub repo
-label_encoder = joblib.load('https://github.com/sLytherin131/air-quality-prediction/label_encoder.pkl')
+# Load saved LabelEncoder from local directory
+label_encoder_path = os.path.join(os.getcwd(), 'label_encoder.pkl')
+label_encoder = joblib.load(label_encoder_path)
 
 # Streamlit App Title
 st.title("Air Quality Prediction")
