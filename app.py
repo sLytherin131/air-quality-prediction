@@ -4,13 +4,13 @@ import pandas as pd
 import numpy as np
 
 # Load saved XGBoost model from GitHub repo
-loaded_xgb_model = joblib.load('https://github.com/sLytherin131/air-quality-prediction/blob/main/xgboost_model.pkl')
+loaded_xgb_model = joblib.load('https://github.com/sLytherin131/air-quality-prediction/xgboost_model.pkl')
 
 # Load saved scaler from GitHub repo
-scaler = joblib.load('https://github.com/sLytherin131/air-quality-prediction/blob/main/scaler.pkl')
+scaler = joblib.load('https://github.com/sLytherin131/air-quality-prediction/scaler.pkl')
 
 # Load saved LabelEncoder from GitHub repo
-label_encoder = joblib.load('https://github.com/sLytherin131/air-quality-prediction/blob/main/label_encoder.pkl')
+label_encoder = joblib.load('https://github.com/sLytherin131/air-quality-prediction/label_encoder.pkl')
 
 # Streamlit App Title
 st.title("Air Quality Prediction")
